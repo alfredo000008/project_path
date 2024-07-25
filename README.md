@@ -7,7 +7,7 @@ pip install prjpath.
 
 # Usage
 get_project_path(add_to_PATH=True)
-This function returns the path of the project by checking for the existence of either 'main.py' or 'README.md' in the current directory or its parent directories. If found, it returns that path; otherwise, it moves one directory up until it reaches the root. If the root is reached, it returns the path where the script using the library is located.
+This function returns the path of the project by checking for the existence of 'main.py' and 'README.md' simultaneously, or the existence of the '.prjroot' file in the current directory or its parent directories. If found, it returns that path; otherwise, it moves one directory up until it reaches the root. If the root is reached, it returns the path where the script using the library is located.
 
 ### Parameters
 **add_to_PATH** (bool, optional): If True, adds the project path to sys.path. Defaults to False.
